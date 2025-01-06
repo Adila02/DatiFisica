@@ -1,0 +1,412 @@
+@charset "UTF-8";
+
+/*Paleta
+#D5EAF2
+#6241D9
+#1E2019
+#E2C044
+#A41623
+#6D49F2
+*/
+
+:root{
+    --cor0:#D5EAF2;
+    --cor1:#6241D9;
+    --cor2:#1E2019;
+    --cor3:#E2C044;
+    --cor4:#A41623;
+    --cor5: #6D49F2;
+    --cor6:#EE05F2;
+    --cor7: #F2F2F2;
+    --cor8: #F2F0E4;
+    --cor9:#8C8C8C;
+    --cor10:#7787A6;
+
+
+
+
+
+
+}
+
+.site-header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    background-image: url('DatiFisica/images/cabecalho.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    height:30vw;
+    max-height: 200px;
+    width: 100%;
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+
+}
+
+/*nav*/
+
+nav{
+    background-color: var(--cor8);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgb(rgba(0, 0, 0, 0.349));
+}
+
+nav > a{
+    color: #7787A6;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: .2s;
+}
+
+nav > a:hover{
+    background-color: var(--cor0);
+    color: var(--cor6);
+
+}
+/*main*/
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color:var(--cor7);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1{
+    color: var(--cor4);
+}
+
+main h2{
+    color: var(--cor2);
+}
+
+main img{
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+/*video*/
+
+div.video{
+    background-color: var(--cor3);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 50%;
+    position: relative;
+
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/*continuação do main*/
+
+main p{
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.5em;
+
+}
+
+
+
+
+
+
+
+
+/*article*/
+.article-introducao {
+    display: flex; /* Define um layout flexível para alinhamento lado a lado */
+    align-items: center; /* Alinha verticalmente os elementos */
+    justify-content: space-between; /* Espaço uniforme entre imagem e texto */
+    max-width: 1200px; /* Limita a largura total */
+    margin: 0 auto; /* Centraliza no meio da página */
+    padding: 40px 20px; /* Espaçamento interno */
+    background-color: var(--cor0); /* Fundo claro baseado na paleta */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    
+}
+
+.article-introducao picture img {
+    max-width: 500px; /* Limita a largura máxima da imagem */
+    width: 100%; /* Torna responsiva */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+}
+
+.article-introducao .content {
+    max-width: 640px; /* Limita a largura do texto */
+    padding-left: 30px; /* Espaçamento entre imagem e texto */
+}
+
+.article-introducao h1 {
+    font-family: 'Arial', sans-serif; /* Fonte moderna */
+    font-size: 32px; /* Tamanho grande para destaque */
+    color: var(--cor2); /* Cor do texto do título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    line-height: 1.3; /* Melhora o espaçamento entre linhas */
+}
+
+.article-introducao p {
+    font-family: 'Georgia', serif; /* Fonte para texto descritivo */
+    font-size: 18px; /* Tamanho legível */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    color: var(--cor2); /* Cor do texto */
+    margin-bottom: 0; /* Remove o espaçamento inferior extra */
+}
+
+/*classe introdução*/
+
+.introducao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 40px;
+    background-color: var(--cor8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+.introducao picture {
+    flex-shrink: 0;
+}
+
+.introducao picture img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Deixa a imagem circular */
+    object-fit: cover;
+}
+
+.introducao > h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.introducao > p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.introducao > button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #6c63ff; /* Cor do texto do botão */
+    background-color: transparent;
+    border: 2px solid #6c63ff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.introducao > button:hover {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+/*seções geo*/
+/* Estilo para as seções */
+.geo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 10%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .geo div {
+    max-width: 50%;
+    padding-right:20px;
+  }
+  
+  .geo img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .geo:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    color: #2e2e2e;
+    margin: 15px 0;
+
+    
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    
+    
+  }
+  
+  /* Estilo dos botões */
+  button {
+    background-color: #6254e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #4e42d4;
+  }
+
+  /* Estilo aside*/
+
+  /* Seção Two */
+  #two {
+    background-color: #c0c8e0; /* Cor de fundo semelhante ao print */
+    padding: 3em 1em;
+    text-align: center;
+}
+
+#two .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#two h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+#two p {
+    font-size: 1.2em;
+    color: #e5e5e5;
+    margin-bottom: 2em;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+}
+
+.features section {
+    text-align: center;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.05); /* Leve transparência no fundo */
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.075);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.features section:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.features section .icon {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.features section h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.features section p {
+    color: #d9d9d9;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+ul.actions {
+    margin-top: 2em;
+}
+
+ul.actions li {
+    list-style: none;
+}
+
+ul.actions .button {
+    font-size: 1em;
+    padding: 0.75em 2em;
+    background-color: #f0f0f0;
+    color: #444;
+    text-decoration: none;
+    border-radius: 0.3em;
+    transition: background-color 0.3s;
+}
+
+ul.actions .button:hover {
+    background-color: #ddd;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    #two h2 {
+        font-size: 2em;
+    }
+    
+    .features section {
+        padding: 1.5em;
+    }
+
+    .features section .icon {
+        font-size: 2.5em;
+    }
+    
+    ul.actions .button {
+        font-size: 0.9em;
+        padding: 0.6em 1.8em;
+    }
+}

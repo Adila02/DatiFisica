@@ -6,35 +6,40 @@
     <title>ProjetoRio</title>
     <link rel="shortcut icon" href="DatiFisica/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-    <header> <!--titulo do site-->
-        <h1>DatiFísica</h1>
+    <header class="site-header"> <!--titulo do site-->
+        
     
     </header>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Assuntos</a></li>
-            <li><a href="#">Principais Ferramentas</a></li>
-            <li><a href="#">contato</a></li>
-        </ul>
+        
+            <a href="#">Home</a>
+            <a href="#">Assuntos</a>
+            <a href="#">Principais Ferramentas</a>
+            <a href="#">contato</a>
+        
     </nav>
     <main>
-        <article>
+        <article class="article-introducao">
             <picture>
                 <source media="(max-width:670px)" srcset="DatiFisica/images/quadro-400x400.0-pq.png">
                 <img src="DatiFisica/images/quadro-300x195.0.png" alt="imagem introdutoria">
             </picture>
-            <h1>
-                Aprenda, Analise e interaja com os experimentos de Física pelo DatiFísica
-            </h1>
-            <p>
-                O DatiFísica é uma plataforma de auxilio na aprendizagem dinâmica da Física, capaz de conectar alunos e professores com o ideal em comum de explorar novas maneiras experimentais de aprender sobre Física.
-            </p>
+            <div class="content">
+                <h1>
+                    Aprenda, Analise e interaja com os experimentos de Física pelo DatiFísica
+                </h1>
+                <p>
+                    O DatiFísica é uma plataforma de auxílio na aprendizagem dinâmica da Física, capaz de conectar alunos e professores com o ideal em comum de explorar novas maneiras experimentais de aprender sobre Física.
+                </p>
+            </div>
+        </article>
            
             <!--acabei de acrescentar essa ancora, será se ela vai servir pra centralizar as imagens(?)-->
-            <section>
+            <section class="introducao">
                 <picture>
                     <source media="(max-width:670px)" srcset="DatiFisica/images/telescopio-400x400.1-pq.png">
                     <img src="DatiFisica/images/telescopio-300x195.1.png" alt="introduçao a fisica">
@@ -43,18 +48,19 @@
                 <p>
                     O conceito de física é algo de difícil definição, é um assunto de constantes mudanças, a medida que o ser humano progride e evolue. Por isso, ao decorrer de novas descobertas surgem também respostas e questões a cerca dessas mudanças. No entanto, outro ponto fundamental sobre a física é sua corrente tentativa de explicar como a naturaza funciona. Logo, para isso é de extrema importancia aprender os conceitos e as ferramentas que a física se utiliza para explicar esses fenômenos naturais.
                 </p>
+                <button>Saiba mais</button>
             </section>
-            <section>
+            <section class="geo">
                 <div>
                     <picture>
                         <source media="(max-width:670px)" srcset="DatiFisica/images/calculadora-400x400.2-pq.png">
                         <img src="DatiFisica/images/calculadora-300x195.2.png" alt="imagem calculadora">
                     </picture>
                     <h3>Explore a física com diversos recursos educacionais </h3>
-									<p>Explore nossos recursos educacionais que envolvem os conceitos de tópicos da física, os simulados, tutoriais, calculadoras e exemplos de forma muito mais interativa e responsiva.</p>
+									<p>Explore nossos recursos educacionais que envolvem os conceitos e tópicos da física, os simulados, tutoriais, calculadoras e exemplos de forma muito mais interativa e responsiva.</p>
                 </div>
             </section>
-            <section>
+            <section class="geo">
                 <div>
                     <picture>
                         <source media="(max-width:670px)" srcset="DatiFisica/images/reuniao-400x400.4-pq.png">
@@ -64,7 +70,7 @@
 									<p>Nosso site de aprendizagem permite que tanto os alunos interajam, quanto os professores visualizem o progresso dos alunos e forneçam feedbacks individuais para uma aprendizagem  personalizada, ajudando a participação ativa dos alunos.</p>
                 </div>
             </section>
-            <section>
+            <section class="geo">
                 <div>
                     <picture>
                         <source media="(max-width:670px)" srcset="DatiFisica/images/ideialuz-400x400.3-pq.png">
@@ -80,7 +86,7 @@
             </div>
 
             <!--two aside-->
-            <aside>
+            
                 <section id="two" class="wrapper style3 fade-up">
                     <div class="inner">
                         <h2>Ferramentas auxiliares de Aprendizagem</h2>
@@ -89,48 +95,48 @@
                             <section>
                                 <span class="icon solid major fa-book"></span>
                                 <h3>Referências Bibliográficas</h3>
-                                <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                                <p>Todos os conteúdos divulgados possuem referências bibliográficas e credibilidade</p>
                             </section>
                             <section>
                                 <span class="icon solid major fa-calculator"></span>
                                 <h3>Calculadora experimental</h3>
-                                <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                                <p>A calculadora é uma ferramenta capaz de permitir a analise entre os valores experimentais e teóricos, ferramenta primordial para compreensão dos estudos da Física</p>
                             </section>
                             <section>
                                 <span class="icon solid major fa-cog"></span>
                                 <h3>Relatório de dados</h3>
-                                <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                                <p>A seção de relatórios será capaz de gerar relátorios de diversas informações a partir da alimentação de dados do próprio site </p>
                             </section>
                             <section>
                                 <span class="icon solid major fa-desktop"></span>
                                 <h3>Videos explicativos</h3>
-                                <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                                <p>Além das demais ferramentas, o site também oferece diversos videos educacionais</p>
                             </section>
                             <section>
                                 <span class="icon solid major fa-link"></span>
                                 <h3>Materiais para baixar</h3>
-                                <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                                <p>Para melhor compreensão e acompanhamento dos materiais estudados também será oferecido o download de materiais em PDF</p>
                             </section>
                             <section>
                                 <span class="icon major fa-gem"></span>
                                 <h3>Dashboards</h3>
-                                <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                                <p>Para melhor vizualização dos resultados e demonstração dos dados</p>
                             </section>
                             
                         </div>
                         <ul class="actions">
-                            <li><a href="generic.html" class="button">Learn more</a></li>
+                            <li><a href="#" class="button">Learn more</a></li>
                         </ul>
                     </div>
                 </section>
 
-            </aside>
+            
             <!--three comece já-->
             <section id="three" class="main special">
-                <header class="major">
+                <article class="major">
                     <h2>Comece a usar o DatiFísica hoje mesmo</h2>
                     <p>Crie uma conta gratuita para que você possa salvar seu progresso a qualquer momento e ter acesso aos recursos que o DatiFísica oferece.</p>
-                </header>
+                </article>
                 <footer class="major">
                     <ul class="actions special">
                         <li><a href="#" class="button primary">comece agora</a></li>
@@ -170,7 +176,7 @@
 										<li>
 											<h3>Endereço</h3>
 											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
+											Brasil, TN 00000-0000<br />
 											USA</span>
 										</li>
 										<li>
@@ -208,10 +214,6 @@
 				</div>
 			</footer>
         </main>
-
-
-
-
 
 
 
