@@ -531,4 +531,42 @@ ul.actions .button:hover {
   #four .icons .icon:hover {
     color: #e0cfe0;
   }
-  
+
+  /*seção do footer (ultima seção)*/
+
+  footer {
+    background-color: var(--cor10); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centralizar texto */
+    font-size: 0.8em; /* Tamanho do texto */
+    padding: 15px 20px; /* Espaçamento interno */
+    width: 100%; /* Garantir que ocupa toda a largura */
+    box-sizing: border-box; /* Incluir padding na largura */
+    position: relative; /* Corrige possíveis problemas de layout */
+}
+
+footer .menu {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove espaçamento externo */
+    display: flex; /* Usar flexbox para alinhamento */
+    justify-content: center; /* Centralizar os itens */
+    flex-wrap: wrap; /* Permitir quebra de linha para itens longos */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+footer .menu li {
+    display: inline-block; /* Exibe os itens em linha */
+}
+
+footer .menu a {
+    color: white; /* Cor do link */
+    font-weight: bold; /* Texto em negrito */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+footer .menu a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: var(--cor9); /* Altera a cor */
+}
