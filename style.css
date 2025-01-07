@@ -31,7 +31,7 @@
 
 .site-header{
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    background-image: url('DatiFisica/images/cabecalho.png');
+    background-image: url('images/cabecalho.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -410,3 +410,125 @@ ul.actions .button:hover {
         padding: 0.6em 1.8em;
     }
 }
+
+/*Seção Formulario*/
+
+#four {
+    background-color: #c0c8e0; 
+    color: var(--cor7); /* Cor do texto */
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  #four h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #four p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  #four .split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  #four .split section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  #four form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #four .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #four .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #four .field.half {
+    flex: 0 0 calc(50% - 10px);
+  }
+  
+  #four label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #four input[type="text"],
+  #four textarea {
+    padding: 10px;
+    border: 1px solid #e0cfe0;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+  }
+  
+  #four textarea {
+    resize: none;
+  }
+  
+  #four .actions {
+    margin-top: 20px;
+  }
+  
+  #four .actions .button.submit {
+    background-color: #ffffff;
+    color: var(--cor10); /*cor do botão*/
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    
+  }
+  
+  #four .actions .button.submit:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
+  
+  #four .contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #four .contact span,
+  #four .contact a {
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  #four .icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  #four .icons .icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  #four .icons .icon:hover {
+    color: #e0cfe0;
+  }
+  
