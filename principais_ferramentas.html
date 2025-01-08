@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principais Ferramentas</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <header class="site-header"> <!--titulo do site-->
+        
+    
+    </header>
+    <nav>
+        
+            <a href="#">Home</a>
+            <a href="#">Assuntos</a>
+            <a href="#">Principais Ferramentas</a>
+            <a href="#four">contato</a>
+        
+    </nav>
+    <main>
+
+    </main>
+
+    <!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://github.com/Adila02" target="_blank">Adila Mota</a></li>
+					</ul>
+				</div>
+			</footer>
+            
+            <script>
+                const iframe = document.getElementById('iframe');
+                iframe.onload = function () {
+                    try {
+                        // Acessa o documento interno do iframe
+                        const iframeContent = iframe.contentWindow.document.documentElement;
+                        // Ajusta a altura do iframe com base no conteúdo
+                        iframe.style.height = iframeContent.scrollHeight + 'px';
+                    } catch (error) {
+                        console.error('Erro ao ajustar a altura do iframe:', error);
+                    }
+                };
+            </script>
+</body>
+</html>

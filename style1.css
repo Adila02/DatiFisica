@@ -143,6 +143,18 @@ main img.pequena{
     margin: auto;
 }
 
+
+/* estilo do iframe é o mesmo do main*/
+iframe{
+    
+    width: 100%;       /* Preenche 100% da largura do contêiner */
+    border: none;      /* Remove borda ao redor do iframe */
+    display: block;    /* Garante que não haja espaços extras */
+    overflow: hidden;  /* Impede scroll interno no iframe */
+    
+}
+
+
 /*video*/
 
 div.video{
