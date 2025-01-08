@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'NunitoSans'; /* Nome da família de fontes */
+    src: url('../Fonts/NunitoSans-Regular.ttf') format('truetype'); /* Corrige 'Truetype' para 'truetype' */
+    font-weight: 400; /* Representa "normal" (peso padrão) */
+    font-style: normal; /* Define o estilo normal */
+}
+
+@font-face {
+    font-family: 'NunitoSans'; /* Mesma família para manter consistência */
+    src: url('../Fonts/NunitoSans-SemiBold.ttf') format('truetype'); /* Corrige 'Truetype' para 'truetype' */
+    font-weight: 600; /* Representa "semi-bold" */
+    font-style: normal; /* Define o estilo normal */
+}
+
+
+
+
 /*Paleta
 #D5EAF2
 #6241D9
@@ -22,8 +39,9 @@
     --cor9:#8C8C8C;
     --cor10:#7787A6;
 
-
-
+    --font-padrao:arial,verdana,helvetica,sans-serif;
+    --font-destaque_regular:"NunitoSans-Regular", serif;
+    --font-destaque_bold:"NunitoSans-SemiBold", serif;
 
 
 
@@ -50,7 +68,7 @@
 
 body{
     background-color: var(--cor0);
-
+    font-family: var(--font-padrao);
 }
 
 /*nav*/
@@ -64,6 +82,8 @@ nav {
     justify-content: center; /* Centraliza os itens */
     flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
     gap: 15px; /* Espaçamento entre os links */
+    font-family: var(--font-destaque_bold);
+    
 }
 
 /* Estilo dos links do menu */
@@ -73,14 +93,15 @@ nav > a {
     border-radius: 5px; /* Bordas arredondadas */
     text-decoration: none; /* Remove sublinhado */
     font-weight: bold; /* Texto em negrito */
-    font-size: 1rem; /* Tamanho do texto */
+    font-size: 1.2rem; /* Tamanho do texto */
     transition: all 0.3s ease; /* Suaviza as transições */
+    font-family: var(--font-destaque_bold);
 }
 
 /* Efeito ao passar o mouse */
 nav > a:hover {
     background-color: var(--cor0); /* Cor de fundo ao passar o mouse */
-    color: var(--cor6); /* Cor do texto ao passar o mouse */
+    color: var(--cor5); /* Cor do texto ao passar o mouse */
     transform: scale(1.05); /* Leve aumento no tamanho */
 }
 
