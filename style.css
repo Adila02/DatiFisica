@@ -45,9 +45,9 @@
     --cor10:#7787A6;
 
     --font-padrao:arial,verdana,helvetica,sans-serif;
-    --font-destaque_regular:"NunitoSans-Regular", serif;
-    --font-destaque_bold:"NunitoSans-SemiBold", serif;
-    --font-destaque_dm:"DMSerifText-Regular",serif;
+    --font-destaque_regular:"NunitoSans-Regular", sans-serif;
+    --font-destaque_bold:"NunitoSans-SemiBold",sans-serif;
+    --font-destaque_dm:"DMSerifText-Regular",sans-serif;
 
 
 
@@ -88,7 +88,7 @@ nav {
     justify-content: center; /* Centraliza os itens */
     flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
     gap: 15px; /* Espaçamento entre os links */
-    font-family: var(--font-destaque_bold);
+    font-family: var(--font-destaque_bold),sans-serif;
     
 }
 
@@ -101,7 +101,7 @@ nav > a {
     font-weight: bold; /* Texto em negrito */
     font-size: 1.2rem; /* Tamanho do texto */
     transition: all 0.3s ease; /* Suaviza as transições */
-    font-family: var(--font-destaque_bold);
+    font-family: var(--font-destaque_bold),sans-serif;
 }
 
 /* Efeito ao passar o mouse */
@@ -251,7 +251,7 @@ main p{
 .introducao > h2 {
     font-size: 2rem; /* Tamanho da fonte do título */
     color: #333; /* Cor do texto */
-    font-family: var(--font-destaque_bold); /* Fonte */
+    font-family: var(--font-destaque_bold),sans-serif; /* Fonte */
 }
 
 .introducao > p {
@@ -323,7 +323,7 @@ main p{
     background-color: #fff;
     border-radius: 8px; /* Bordas levemente arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: var(--font-destaque_bold);
+    font-family: var(--font-destaque_bold),sans-serif;
     
 
   }
@@ -346,7 +346,7 @@ main p{
     font-size: 2rem;
     color: #2e2e2e;
     margin: 15px 0;
-    font-family: var(--font-destaque_bold);
+    font-family: var(--font-destaque_bold),sans-serif;
 
     
   }
@@ -356,7 +356,7 @@ main p{
     line-height: 1.6;
     color: #555;
     margin-bottom: 20px;
-    font-family: var(--font-destaque_dm);
+    font-family: var(--font-destaque_dm),sans-serif;
     
     
   }
@@ -393,8 +393,6 @@ main p{
 }
 
 
-
-
   /* Estilo aside*/
 
   /* Seção Two */
@@ -413,14 +411,17 @@ main p{
 #two h2 {
     font-size: 2.5em;
     font-weight: 700;
-    color: #fff;
+    color: var(--cor8);
     margin-bottom: 0.5em;
+    font-family: var(--font-destaque_bold),sans-serif;
 }
 
 #two p {
-    font-size: 1.2em;
-    color: #e5e5e5;
+    font-size: 1.1em;/*1.2em*/
+    color: var(--cor8);
     margin-bottom: 2em;
+    font-family: var(--font-destaque_regular),sans-serif;
+    
 }
 
 .features {
@@ -519,6 +520,7 @@ ul.actions .button:hover {
     font-weight: bold; /* Negrito */
     margin-bottom: 20px; /* Espaçamento inferior */
     line-height: 1.4; /* Altura das linhas */
+    font-family: var(--font-destaque_bold);
 }
 
 /* Estilo do parágrafo */
@@ -526,6 +528,7 @@ ul.actions .button:hover {
     font-size: 1.1rem; /* Tamanho do texto */
     margin-bottom: 40px; /* Espaçamento inferior */
     line-height: 1.6; /* Altura das linhas */
+    font-family: var(--font-destaque_regular);
 }
 
 /* Estilo do footer */
@@ -543,6 +546,7 @@ ul.actions .button:hover {
     text-decoration: none; /* Remove sublinhado */
     font-weight: bold; /* Negrito */
     transition: all 0.3s ease; /* Suaviza a transição */
+    font-family: var(--font-destaque_dm);
 }
 
 /* Botão primário */
@@ -589,11 +593,13 @@ ul.actions .button:hover {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
+    font-family: var(--font-destaque_bold),sans-serif;
   }
   
   #four p {
     font-size: 1rem;
     margin-bottom: 40px;
+    font-family: var(--font-destaque_regular),sans-serif;
   }
   
   #four .split {
@@ -631,6 +637,7 @@ ul.actions .button:hover {
   #four label {
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: var(--font-destaque_regular),sans-serif;
   }
   
   #four input[type="text"],
@@ -645,6 +652,7 @@ ul.actions .button:hover {
   
   #four textarea {
     resize: none;
+    
   }
   
   #four .actions {
@@ -661,7 +669,7 @@ ul.actions .button:hover {
     text-transform: uppercase;
     font-weight: bold;
     transition: all 0.3s ease;
-    
+    font-family: var(--font-destaque_dm),sans-serif;
   }
   
   #four .actions .button.submit:hover {
@@ -672,6 +680,7 @@ ul.actions .button:hover {
   #four .contact h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    font-family: var(--font-destaque_dm),sans-serif;
   }
   
   #four .contact span,
@@ -708,6 +717,7 @@ ul.actions .button:hover {
     width: 100%; /* Garantir que ocupa toda a largura */
     box-sizing: border-box; /* Incluir padding na largura */
     position: relative; /* Corrige possíveis problemas de layout */
+    font-family: var(--font-padrao);
 }
 
 footer .menu {
