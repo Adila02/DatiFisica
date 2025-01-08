@@ -3,47 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principais Ferramentas</title>
+    <title>home</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style1.css">
+
+    <!-- CDN do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!--cabeçalho-->
-    <header class="site-header"> <!--titulo do site-->
-        
-    
-    </header>
-    <nav>
-        
-            <a href="#">Home</a>
-            <a href="#">Assuntos</a>
-            <a href="#">Principais Ferramentas</a>
-            <a href="#four">contato</a>
-        
-    </nav>
     <main>
 
-    </main>
-
-    <!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://github.com/Adila02" target="_blank">Adila Mota</a></li>
-					</ul>
-				</div>
-			</footer>
+        <!--inicio do Home-->
+        <!--one-->
+        <article id=one class="article-introducao">
+            <picture>
+                <source media="(max-width:670px)" srcset="images/quadro-400x400.0-pq.png">
+                <img src="images/quadro-300x195.0.png" alt="imagem introdutoria">
+            </picture>
+            <div class="content">
+                <h1>
+                    Aprenda, Analise e interaja com os experimentos de Física pelo DatiFísica
+                </h1>
+                <p>
+                    O DatiFísica é uma plataforma de auxílio na aprendizagem dinâmica da Física, capaz de conectar alunos e professores com o ideal em comum de explorar novas maneiras experimentais de aprender sobre Física.
+                </p>
+            </div>
+        </article>
+           
+            <!--acabei de acrescentar essa ancora, será se ela vai servir pra centralizar as imagens(?)-->
+            <section class="introducao">
+                <picture>
+                    <source media="(max-width:670px)" srcset="images/telescopio-400x400.1-pq.png">
+                    <img src="images/telescopio-300x195.1.png" alt="introduçao a fisica">
+                </picture>
+                <h2>Introdução a física</h2>
+                <p>
+                    O conceito de física é algo de difícil definição, é um assunto de constantes mudanças, a medida que o ser humano progride e evolue. Por isso, ao decorrer de novas descobertas surgem também respostas e questões a cerca dessas mudanças. No entanto, outro ponto fundamental sobre a física é sua corrente tentativa de explicar como a naturaza funciona. Logo, para isso é de extrema importancia aprender os conceitos e as ferramentas que a física se utiliza para explicar esses fenômenos naturais.
+                </p>
+                <button>Saiba mais</button>
+            </section>
             
-            <script>
-                const iframe = document.getElementById('iframe');
-                iframe.onload = function () {
-                    try {
-                        // Acessa o documento interno do iframe
-                        const iframeContent = iframe.contentWindow.document.documentElement;
-                        // Ajusta a altura do iframe com base no conteúdo
-                        iframe.style.height = iframeContent.scrollHeight + 'px';
-                    } catch (error) {
-                        console.error('Erro ao ajustar a altura do iframe:', error);
-                    }
-                };
-            </script>
+            <section class="geo">
+                <div>
+                    <picture>
+                        <source media="(max-width:670px)" srcset="images/calculadora-400x400.2-pq.png">
+                        <img src="images/calculadora-300x195.2.png" alt="imagem calculadora">
+                    </picture>
+                    <h3>Explore a física com diversos recursos educacionais </h3>
+									<p>Explore nossos recursos educacionais que envolvem os conceitos e tópicos da física, os simulados, tutoriais, calculadoras e exemplos de forma muito mais interativa e responsiva.</p>
+                </div>
+            
+            </section>
+            <section class="geo">
+                <div>
+                    <picture>
+                        <source media="(max-width:670px)" srcset="images/reuniao-400x400.4-pq.png">
+                        <img src="images/reuniao-300x195.4.png" alt="imagem reuniao">
+                    </picture>
+                    <h3>Envolva todos os alunos</h3>
+									<p>Nosso site de aprendizagem permite que tanto os alunos interajam, quanto os professores visualizem o progresso dos alunos e forneçam feedbacks individuais para uma aprendizagem  personalizada, ajudando a participação ativa dos alunos.</p>
+                </div>
+            </section>
+            <section class="geo">
+                <div>
+                    <picture>
+                        <source media="(max-width:670px)" srcset="images/ideialuz-400x400.3-pq.png">
+                        <img src="images/ideialuz-300x195.3.png" alt="imagem ideialuz">
+                    </picture>
+                    <h3>Torne a física de fácil compreensão</h3>
+									<p>Nosso site de aprendizagem possui elementos pedagógicos e lúdicos capaz de tornar a compreensão da física muito mais didática e interativa, traçando paralelos entre a física e o mundo real.</p>
+                </div>
+            </section>
+        </div>
+
+            <!--seção video-->
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/c4HR4SQ5hVM?si=xT2Sjv29mG8DAaOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!--two aside-->
+            
+                <section id="two" class="wrapper style3 fade-up">
+                    <div class="inner">
+                        <h2>Ferramentas auxiliares de Aprendizagem</h2>
+                        <p>Encontre e use a ferramenta que você desejar</p>
+                        <div class="features">
+                            <section>
+                                <span class="icon fas fa-book"></span>
+                                <h3>Referências Bibliográficas</h3>
+                                <p>Todos os conteúdos divulgados possuem referências bibliográficas e credibilidade</p>
+                            </section>
+                            <section>
+                                <span class="icon fas fa-calculator"></span>
+                                <h3>Calculadora experimental</h3>
+                                <p>A calculadora é uma ferramenta capaz de permitir a analise entre os valores experimentais e teóricos, ferramenta primordial para compreensão dos estudos da Física</p>
+                            </section>
+                            <section>
+                                <span class="icon fas fa-cog"></span>
+                                <h3>Relatório de dados</h3>
+                                <p>A seção de relatórios será capaz de gerar relátorios de diversas informações a partir da alimentação de dados do próprio site </p>
+                            </section>
+                            <section>
+                                <span class="icon fas fa-desktop"></span>
+                                <h3>Videos explicativos</h3>
+                                <p>Além das demais ferramentas, o site também oferece diversos videos educacionais</p>
+                            </section>
+                            <section>
+                                <span class="icon fas fa-link"></span>
+                                <h3>Materiais para baixar</h3>
+                                <p>Para melhor compreensão e acompanhamento dos materiais estudados também será oferecido o download de materiais em PDF</p>
+                            </section>
+                            <section>
+                                <span class="icon fas fa-gem"></span>
+                                <h3>Dashboards</h3>
+                                <p>Para melhor vizualização dos resultados e demonstração dos dados</p>
+                            </section>
+                            
+                        </div>
+                        <ul class="actions">
+                            <li><a href="#" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            
+            <!--three comece já-->
+            <section id="three" class="main special">
+                <article class="major">
+                    <h2>Comece a usar o DatiFísica hoje mesmo</h2>
+                    <p>Crie uma conta gratuita para que você possa salvar seu progresso a qualquer momento e ter acesso aos recursos que o DatiFísica oferece.</p>
+                </article>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="#" class="button primary">comece agora</a></li>
+                        <li><a href="#" class="button">Saiba mais</a></li>
+                    </ul>
+                </footer>
+            </section>
+            <!--Four-->
+
+<section id="four" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Entre em contato conosco</h2>
+        <p>Entre em contato conosco para saber mais sobre o projeto, colaborações, sugestões ou apenas para mandar um "Oi"!</p>
+        <div class="split style1">
+            <section>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Mensagem</label>
+                            <textarea name="message" id="message" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button submit">Send Message</a></li>
+                    </ul>
+                </form>
+            </section>
+            <section>
+                <ul class="contact">
+                    <li>
+                        <h3>Endereço</h3>
+                        <span>12345 Somewhere Road #654<br />
+                        São Paulo, SP 00000-0000<br />
+                        BR</span>
+                    </li>
+                    <li>
+                        <h3>Email</h3>
+                        <a href="mailto:user@untitled.tld">user@untitled.tld</a>
+                    </li>
+                    <li>
+                        <h3>Telefone</h3>
+                        <span>(00) 0000-0000</span>
+                    </li>
+                    <li>
+                        <h3>Social</h3>
+                        <ul class="icons">
+                            <a href="#" class="icon fab fa-twitter"><span></span></a>
+                            <a href="#" class="icon fab fa-facebook-f"><span></span></a>
+                            <a href="#" class="icon fab fa-github"><span></span></a>
+                            <a href="#" class="icon fab fa-instagram"><span></span></a>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+        </main>
+
+         <!--link externo js-->
+    <script src="js/home.js"></script>
+    <script>
+        const iframe = document.getElementById('iframe');
+        iframe.onload = function () {
+            try {
+                // Acessa o documento interno do iframe
+                const iframeContent = iframe.contentWindow.document.documentElement;
+                // Ajusta a altura do iframe com base no conteúdo
+                iframe.style.height = iframeContent.scrollHeight + 'px';
+            } catch (error) {
+                console.error('Erro ao ajustar a altura do iframe:', error);
+            }
+        };
+    </script>
+    <script>
+        function notifyParentIframeHeight() {
+            try {
+                // Calcula a altura do conteúdo principal
+                const mainContent = document.querySelector('main');
+                const contentHeight = mainContent.scrollHeight;
+
+                // Envia a altura para o iframe pai
+                if (window.parent) {
+                    window.parent.postMessage({ iframeHeight: contentHeight }, '*');
+                }
+            } catch (error) {
+                console.error('Erro ao calcular a altura do conteúdo:', error);
+            }
+        }
+
+        // Chama a função ao carregar a página
+        window.addEventListener('load', notifyParentIframeHeight);
+
+        // Chama novamente caso o layout mude (opcional)
+        window.addEventListener('resize', notifyParentIframeHeight);
+    </script>
+    
 </body>
 </html>

@@ -18,15 +18,104 @@
         
     
     </header>
+ <!DOCTYPE html>
+<html lang="pt-br">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Dinâmico</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+<body>
+    <!-- Navegação -->
     <nav>
-        
-            <a href="home.html" target="iframe">Home</a>
-            <a href="#">Assuntos</a>
-            <a href="principais_ferramentas.html" target="iframe">Principais Ferramentas</a>
-            <a href="#four">contato</a>
-        
+        <a href="home.html" target="iframe">Home</a>
+        <a href="#">Assuntos</a>
+        <a href="principais_ferramentas.html" target="iframe">Principais Ferramentas</a>
+        <a href="#four">Contato</a>
     </nav>
-    <iframe id="iframe" src="home.html"></iframe>
+
+    <!-- Iframe -->
+    <iframe id="iframe" name="iframe" src="home.html" scrolling="no"></iframe>
+
+    <!-- Script para ajustar altura do iframe -->
+    <script>
+        // Função para ajustar a altura do iframe
+        function adjustIframeHeight() {
+            const iframe = document.getElementById('iframe');
+            try {
+                const iframeContentHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+                iframe.style.height = iframeContentHeight + 'px';
+            } catch (error) {
+                console.error('Erro ao ajustar a altura do iframe:', error);
+            }
+        }
+
+        // Evento para ajustar altura sempre que o iframe carregar novo conteúdo
+        document.getElementById('iframe').addEventListener('load', adjustIframeHeight);
+
+        // Delegação de eventos para capturar cliques nos links
+        document.querySelector('nav').addEventListener('click', (event) => {
+            if (event.target.tagName === 'A' && event.target.hasAttribute('target') && event.target.getAttribute('target') === 'iframe') {
+                const iframe = document.getElementById('iframe');
+                iframe.src = event.target.href; // Atualiza o conteúdo do iframe
+                event.preventDefault(); // Evita o redirecionamento padrão
+            }
+        });
+
+        // Ajuste inicial ao carregar a página
+        window.addEventListener('load', adjustIframeHeight);
+    </script>
+    </body>
+    </html>
+    
+
+    <!-- Script para ajustar altura do iframe -->
+    <script>
+        // Função para ajustar a altura do iframe
+        function adjustIframeHeight() {
+            const iframe = document.getElementById('iframe');
+            iframe.onload = () => {
+                try {
+                    const iframeContentHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+                    iframe.style.height = iframeContentHeight + 'px';
+                } catch (error) {
+                    console.error('Erro ao ajustar a altura do iframe:', error);
+                }
+            };
+        }
+
+        // Delegação de eventos para capturar cliques nos links
+        document.querySelector('nav').addEventListener('click', (event) => {
+            if (event.target.tagName === 'A' && event.target.hasAttribute('target') && event.target.getAttribute('target') === 'iframe') {
+                adjustIframeHeight();
+            }
+        });
+
+        // Ajuste inicial ao carregar a página
+        window.addEventListener('load', adjustIframeHeight);
+    </script>
+</body>
+</html>
+
 
 
 <script>
@@ -42,7 +131,17 @@
     };
 </script>
 
-
+<script>window.addEventListener('message', (event) => {
+    try {
+        if (event.data.iframeHeight) {
+            const iframe = document.getElementById('iframe');
+            iframe.style.height = event.data.iframeHeight + 'px';
+        }
+    } catch (error) {
+        console.error('Erro ao ajustar a altura do iframe:', error);
+    }
+});
+</script>
         <!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
@@ -55,6 +154,7 @@
         <!--link externo js-->
 
     <script src="js/index.js"></script>
+    
 
 </body>
 </html>

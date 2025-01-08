@@ -218,6 +218,28 @@
             }
         };
     </script>
+    <script>
+        function notifyParentIframeHeight() {
+            try {
+                // Calcula a altura do conteúdo principal
+                const mainContent = document.querySelector('main');
+                const contentHeight = mainContent.scrollHeight;
+
+                // Envia a altura para o iframe pai
+                if (window.parent) {
+                    window.parent.postMessage({ iframeHeight: contentHeight }, '*');
+                }
+            } catch (error) {
+                console.error('Erro ao calcular a altura do conteúdo:', error);
+            }
+        }
+
+        // Chama a função ao carregar a página
+        window.addEventListener('load', notifyParentIframeHeight);
+
+        // Chama novamente caso o layout mude (opcional)
+        window.addEventListener('resize', notifyParentIframeHeight);
+    </script>
     
 </body>
 </html>
