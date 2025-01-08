@@ -14,7 +14,12 @@
     font-style: normal; /* Define o estilo normal */
 }
 
-
+@font-face {
+    font-family: 'DMSerif'; /* Nome da família de fontes */
+    src: url('../Fonts/DMSerifText-Regular.ttf') format('truetype'); /* Corrige 'Truetype' para 'truetype' */
+    font-weight: 400; /* Representa "normal" (peso padrão) */
+    font-style: normal; /* Define o estilo normal */
+}
 
 
 /*Paleta
@@ -42,6 +47,7 @@
     --font-padrao:arial,verdana,helvetica,sans-serif;
     --font-destaque_regular:"NunitoSans-Regular", serif;
     --font-destaque_bold:"NunitoSans-SemiBold", serif;
+    --font-destaque_dm:"DMSerifText-Regular",serif;
 
 
 
@@ -168,8 +174,6 @@ main p{
 }
 
 
-
-
 /*article*/
 .article-introducao {
     display: flex; /* Define um layout flexível para alinhamento lado a lado */
@@ -179,7 +183,7 @@ main p{
     margin: 0 auto; /* Centraliza no meio da página */
     padding: 40px 20px; /* Espaçamento interno */
     background-color: var(--cor0); /* Fundo claro baseado na paleta */
-    border-radius: 8px; /* Bordas levemente arredondadas */
+    border-radius: 8px 8px 0px 0px; /* Bordas levemente arredondadas */
     
 }
 
@@ -196,7 +200,7 @@ main p{
 }
 
 .article-introducao h1 {
-    font-family: 'Arial', sans-serif; /* Fonte moderna */
+    font-family: 'Nunito', serif; /* Fonte moderna */
     font-size: 32px; /* Tamanho grande para destaque */
     color: var(--cor2); /* Cor do texto do título */
     margin-bottom: 20px; /* Espaçamento inferior */
@@ -204,7 +208,7 @@ main p{
 }
 
 .article-introducao p {
-    font-family: 'Georgia', serif; /* Fonte para texto descritivo */
+    font-family: 'DMSerif', serif; /* Fonte para texto descritivo */
     font-size: 18px; /* Tamanho legível */
     line-height: 1.8; /* Espaçamento entre linhas */
     color: var(--cor2); /* Cor do texto */
@@ -218,10 +222,10 @@ main p{
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 20px;
+    margin: auto; /*20px escolhida pelo chat*/
     padding: 40px;
     background-color: var(--cor8);
-    border-radius: 10px;
+    border-radius: 0px 0px 8px 8px;/*10px*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     gap: 20px;
 }
@@ -278,8 +282,9 @@ main p{
     margin: 50px 10%;
     padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 8px; /* Bordas levemente arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 
   }
   
@@ -337,6 +342,7 @@ main p{
     background-color: #c0c8e0; /* Cor de fundo semelhante ao print */
     padding: 3em 1em;
     text-align: center;
+    border-radius: 8px 8px 0px 0px; /* Bordas levemente arredondadas */
 }
 
 #two .inner {
@@ -516,6 +522,7 @@ ul.actions .button:hover {
     color: var(--cor7); /* Cor do texto */
     padding: 50px 20px;
     font-family: Arial, sans-serif;
+    border-radius: 0px 0px 8px 8px; /* Bordas levemente arredondadas */
   }
   
   #four h2 {
