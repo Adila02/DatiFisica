@@ -218,60 +218,99 @@ main p{
 /*classe introdução*/
 
 .introducao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto; /*20px escolhida pelo chat*/
-    padding: 40px;
-    background-color: var(--cor8);
-    border-radius: 0px 0px 8px 8px;/*10px*/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    gap: 20px;
+    display: flex; /* Define layout flexbox */
+    justify-content: flex-start; /* Alinha os itens no início horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    max-width: 1200px; /* Largura máxima */
+    margin: auto; /* Centraliza horizontalmente */
+    padding: 40px; /* Espaçamento interno */
+    background-color: var(--cor8); /* Cor de fundo */
+    border-radius: 0px 0px 8px 8px; /* Arredonda os cantos inferiores */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    gap: 20px; /* Espaçamento entre os itens filhos */
 }
 
 .introducao picture {
-    flex-shrink: 0;
+    flex-shrink: 0; /* Impede que a imagem encolha */
 }
 
 .introducao picture img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; /* Deixa a imagem circular */
-    object-fit: cover;
+    width: 300px; /* Define a largura da imagem */
+    height: 300px; /* Define a altura da imagem */
+    border-radius: 8px; /* Borda levemente arredondada */
+    object-fit: cover; /* Garante que a imagem preencha o espaço definido */
+}
+
+.introducao > div {
+    display: flex; /* Flexbox interno */
+    flex-direction: column; /* Alinha conteúdo verticalmente */
+    gap: 15px; /* Espaçamento entre o h2 e o p */
+    flex: 1; /* Faz o texto ocupar o espaço disponível */
 }
 
 .introducao > h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto */
+    font-family: var(--font-destaque_bold); /* Fonte */
 }
 
 .introducao > p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Tamanho do texto do parágrafo */
+    color: #555; /* Cor do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    font-family: var(--font-destaque_dm); /* Fonte */
+    margin-bottom: 0; /* Remove o espaçamento inferior */
 }
 
+/* Botão */
 .introducao > button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #6c63ff; /* Cor do texto do botão */
-    background-color: transparent;
-    border: 2px solid #6c63ff;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Permite o dimensionamento */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: var(--cor1); /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid #6c63ff; /* Borda */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor pointer ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    margin-top: 20px; /* Espaçamento superior */
+    align-self: center; /* Centraliza o botão dentro do container */
 }
 
 .introducao > button:hover {
-    background-color: #6c63ff;
-    color: #fff;
+    background-color: #6c63ff; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .introducao {
+        flex-direction: column; /* Organiza verticalmente */
+        text-align: center; /* Centraliza texto */
+        align-items: center; /* Centraliza itens */
+    }
+
+    .introducao picture img {
+        width: 200px; /* Reduz o tamanho da imagem */
+        height: 200px; /* Reduz a altura */
+    }
+
+    .introducao > h2 {
+        font-size: 1.8rem; /* Ajusta o tamanho do título */
+    }
+
+    .introducao > p {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto do parágrafo */
+    }
+
+    .introducao > button {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte do botão */
+        padding: 8px 16px; /* Reduz o tamanho do botão */
+    }
+}
+
 
 /*seções geo*/
 /* Estilo para as seções */
@@ -284,6 +323,7 @@ main p{
     background-color: #fff;
     border-radius: 8px; /* Bordas levemente arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-destaque_bold);
     
 
   }
@@ -306,6 +346,7 @@ main p{
     font-size: 2rem;
     color: #2e2e2e;
     margin: 15px 0;
+    font-family: var(--font-destaque_bold);
 
     
   }
@@ -315,6 +356,7 @@ main p{
     line-height: 1.6;
     color: #555;
     margin-bottom: 20px;
+    font-family: var(--font-destaque_dm);
     
     
   }
@@ -334,6 +376,24 @@ main p{
   button:hover {
     background-color: #4e42d4;
   }
+
+  /*responsividade*/
+
+  @media (max-width: 768px) {
+    .geo {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .geo .image {
+        width: 100px;
+        height: 100px; /* Reduz o tamanho da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+}
+
+
+
 
   /* Estilo aside*/
 
