@@ -788,7 +788,6 @@ footer .menu a:hover {
 
 /*Article equipe*/
 
-
 #equipe {
     max-width: 800px;
     margin: 20px auto;
@@ -806,6 +805,7 @@ footer .menu a:hover {
     color: #333;
     background-color: #f5f5f5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Cores personalizadas para cada classe */
@@ -840,6 +840,7 @@ footer .menu a:hover {
     justify-content: center;
     align-items: center; /* Align items in the center */
     width: 100%;
+    
 }
 
 #equipe h2 {
@@ -849,7 +850,7 @@ footer .menu a:hover {
     color: #444;
     font-weight: bold;
     text-transform: capitalize;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-destaque_dm),sans-serif;
 }
 
 /* Listas */
@@ -857,12 +858,19 @@ footer .menu a:hover {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-align: center;
+    /*codigo do guanabara*/
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 1;
 }
 
 #equipe ul li {
     margin-bottom: 5px;
     font-size: 1em;
     color: #333;
+    font-family: var(--font-destaque_regular);
+    text-align: center;
 }
 
 /* Seções com cor de fundo preenchendo toda a margem */
