@@ -760,53 +760,114 @@ footer .menu a:hover {
     color: var(--cor9); /* Altera a cor */
 }
 
-/*contato*/
+/*Pagina contato*/
 
-.contato #equipe {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    padding: 20px 0;
-}
+/*seção imagem*/
 
-.contato #equipe h1, #equipe h2 {
-    text-align: center;
-}
-
-.contato #equipe div {
-    margin: 20px auto;
-    width: 70%;
-    max-width: 900px;
+#img_equipe {
     display: flex;
-    align-items: center;
-    background-color: #fff8dc; /* Fundo amarelo claro */
-    border: 2px dashed #c8c8c8; /* Bordas tracejadas */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0; /* Remove completamente o espaçamento interno */
+    background-color: var(--cor0); /* Fundo claro do container */
+    border-radius: 8px 8px 0px 0px; /* Remove arredondamento se quiser que a imagem ocupe toda a área */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
 }
 
-#contato .equipe div img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
+#img_equipe img {
+    width: calc(100% + 40px); /* Faz a imagem ocupar mais que 100% do container para cobrir possíveis margens */
+    height: auto;
+    object-fit: cover; /* Faz a imagem preencher todo o espaço do container */
+    margin: -20px; /* Move a imagem para fora para remover qualquer borda ou espaço indesejado */
+    border-radius: 0; /* Remove borda arredondada da imagem */
+}
+
+
+
+
+/*Article equipe*/
+
+
+#equipe {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#equipe section {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    color: #333;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cores personalizadas para cada classe */
+#equipe .Aia {
+    background-color: #f4e0d9; /* Soft beige/orange */
+}
+
+#equipe .Leonardo {
+    background-color: #ece7f0; /* Light purple */
+}
+
+#equipe .Miqueias {
+    background-color: #f7e5cf; /* Light peach/orange */
+}
+
+#equipe .Victor {
+    background-color: #e4d4e3; /* Muted pinkish purple */
+}
+
+/* Imagens */
+#equipe img {
+    max-width: 150px;
     margin-right: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#contato .equipe div h2 {
-    font-size: 1.5rem;
-    color: #000;
-    margin-bottom: 10px;
-    font-style: italic;
+/* Títulos e listas ao lado da imagem */
+#equipe div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Align items in the center */
+    width: 100%;
 }
 
-#contato .equipe div ul {
-    list-style-type: disc;
-    padding-left: 20px;
+#equipe h2 {
     margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #444;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Arial', sans-serif;
 }
 
-#contato .equipe div ul li {
-    margin: 5px 0;
+/* Listas */
+#equipe ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
+#equipe ul li {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Seções com cor de fundo preenchendo toda a margem */
+#equipe section {
+    width: calc(100% + 40px); /* Expandir para cobrir toda a margem */
+    margin-left: -20px;
+    margin-right: -20px;
+}
