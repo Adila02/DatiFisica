@@ -879,3 +879,106 @@ footer .menu a:hover {
     margin-left: -20px;
     margin-right: -20px;
 }
+
+/*Seção Assuntos*/
+
+/* Estilos para a seção "assunto" */
+#assunto {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+#assunto .inner {
+    max-width: 1400px; /* Aumenta o contêiner */
+    margin: 0 auto;
+}
+
+#assunto h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#assunto .featr {
+    display: flex;
+    flex-direction: column; /* Coloca os itens verticalmente */
+    gap: 20px;
+}
+
+#assunto .featr > div {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row-reverse; /* Inverte para colocar a imagem à direita */
+}
+
+#assunto .featr img {
+    max-width: 200px; /* Aumenta o tamanho da imagem */
+    margin-left: 20px; /* Espaço entre a imagem e o conteúdo */
+    margin-right: 20px;/*eu coloquei*/
+    padding: 10px;/*eu coloquei*/
+    border-radius: 8px;
+}
+
+#assunto .featr h2 {
+    font-size: 1.7em; /* Tamanho maior para o título */
+    margin-bottom: 10px;
+    color: #333;
+    flex-basis: 100%;
+}
+
+#assunto .featr ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+#assunto .featr ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#assunto .featr .actions {
+    margin-top: 20px; /* Espaço maior entre a lista e o botão */
+}
+
+#assunto .featr .actions .button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#assunto .featr .actions .button:hover {
+    background-color: #1c7ed6;
+}
+
+#assunto .featr .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #assunto .featr > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #assunto .featr img {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+}

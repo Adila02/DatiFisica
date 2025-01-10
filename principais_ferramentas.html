@@ -12,132 +12,96 @@
 </head>
 <body>
     <main>
+        
+        <!--Seção do slide-->
 
-        <!--inicio do Home-->
-        <!--one-->
-        <div>
-
-            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQixmB7rEhtV99vq9m2pDHFlidvq8552wLYeLWrmP8ki8P3cYryb6gOCtWytkAJecRuHT4pmT-IhlKc/embed?start=false&loop=true&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-
-        </div>
-
-       
-        <div><a href="assets/relatorio_de_dados.pdf" download="relatorio_de_dados" target="_blank">arquivo relatorio de dados</a></div>
-
-        <div><a href="assets/Atividade_experimental.rar" download="Atividade_experimental" target="_blank">Arquivo Atividade_experimental</a></div>
+        <section>
+            <h1>Projeto Arquitetural de um experimento</h1>
+            <div>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQixmB7rEhtV99vq9m2pDHFlidvq8552wLYeLWrmP8ki8P3cYryb6gOCtWytkAJecRuHT4pmT-IhlKc/embed?start=false&loop=true&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+            
+            <div>
+                <a href="assets/Atividade_experimental.rar" download="Atividade_experimental" target="_blank">Arquivo Atividade_experimental</a>
+                <!--botão do download-->
+                <ul>
+                    <li><a href=""><button type="submit">Donwload Atividade experimental</button></a></li>
+                </ul>
+            </div>
+        </section>
            
-            <!--acabei de acrescentar essa ancora, será se ela vai servir pra centralizar as imagens(?)-->
-            <section class="introducao">
-                <picture>
-                    <source media="(max-width:670px)" srcset="images/telescopio-400x400.1-pq.png">
-                    <img src="images/telescopio-300x195.1.png" alt="introduçao a fisica">
-                </picture>
-                <h2>Introdução a física</h2>
-                <p>
-                    O conceito de física é algo de difícil definição, é um assunto de constantes mudanças, a medida que o ser humano progride e evolue. Por isso, ao decorrer de novas descobertas surgem também respostas e questões a cerca dessas mudanças. No entanto, outro ponto fundamental sobre a física é sua corrente tentativa de explicar como a naturaza funciona. Logo, para isso é de extrema importancia aprender os conceitos e as ferramentas que a física se utiliza para explicar esses fenômenos naturais.
-                </p>
-                <button>Saiba mais</button>
-            </section>
-            
-            <section class="geo">
-                <div>
-                    <picture>
-                        <source media="(max-width:670px)" srcset="images/calculadora-400x400.2-pq.png">
-                        <img src="images/calculadora-300x195.2.png" alt="imagem calculadora">
-                    </picture>
-                    <h3>Explore a física com diversos recursos educacionais </h3>
-									<p>Explore nossos recursos educacionais que envolvem os conceitos e tópicos da física, os simulados, tutoriais, calculadoras e exemplos de forma muito mais interativa e responsiva.</p>
-                </div>
-            
-            </section>
-            <section class="geo">
-                <div>
-                    <picture>
-                        <source media="(max-width:670px)" srcset="images/reuniao-400x400.4-pq.png">
-                        <img src="images/reuniao-300x195.4.png" alt="imagem reuniao">
-                    </picture>
-                    <h3>Envolva todos os alunos</h3>
-									<p>Nosso site de aprendizagem permite que tanto os alunos interajam, quanto os professores visualizem o progresso dos alunos e forneçam feedbacks individuais para uma aprendizagem  personalizada, ajudando a participação ativa dos alunos.</p>
-                </div>
-            </section>
-            <section class="geo">
-                <div>
-                    <picture>
-                        <source media="(max-width:670px)" srcset="images/ideialuz-400x400.3-pq.png">
-                        <img src="images/ideialuz-300x195.3.png" alt="imagem ideialuz">
-                    </picture>
-                    <h3>Torne a física de fácil compreensão</h3>
-									<p>Nosso site de aprendizagem possui elementos pedagógicos e lúdicos capaz de tornar a compreensão da física muito mais didática e interativa, traçando paralelos entre a física e o mundo real.</p>
-                </div>
-            </section>
-        </div>
-
-            <!--seção video-->
-
-            <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/c4HR4SQ5hVM?si=xT2Sjv29mG8DAaOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <!--Seção da calculadora-->
+        <section>
+            <div>
+                <h1>Calculadora de Experimentos</h1>
+                <!-- Imagem com descrição adequada -->
+                <img src="images/projetil.jpg" alt="Imagem de um projétil sendo lançado" style="max-width: 100%; height: auto;">
+            </div>
+        
+            <div>
+                <!-- Subtítulo para a seção de cálculo -->
+                <h2>Cálculo do Alcance Horizontal</h2>
+                <!-- Formulário para entrada de dados -->
+                <form id="formulario">
+                    <div>
+                        <!-- Campo para o ângulo -->
+                        <label for="angulo">Ângulo de lançamento (em graus):</label>
+                        <input type="number" id="angulo" name="angulo" step="0.01" required>
+                        <br><br>
+                    </div>
+                    <div>
+                        <!-- Campo para a deformação -->
+                        <label for="deformacao">Deformação da mola (em metros):</label>
+                        <input type="number" id="deformacao" name="deformacao" step="0.01" required>
+                        <br><br>
+                    </div>
+                    <div>
+                        <!-- Campo para a massa -->
+                        <label for="massa">Massa do projétil (em kg):</label>
+                        <input type="number" id="massa" name="massa" step="0.001" required>
+                        <br><br>
+                    </div>
+                    <!-- Botão de cálculo -->
+                    <ul>
+                        <li><a href=""><button type="submit">Calcular</button></a></li>
+                    </ul>
+                </form>
+                <!-- Área para exibir o resultado -->
+                <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
             </div>
 
-            <!--two aside-->
-            
-                <section id="two" class="wrapper style3 fade-up">
-                    <div class="inner">
-                        <h2>Ferramentas auxiliares de Aprendizagem</h2>
-                        <p>Encontre e use a ferramenta que você desejar</p>
-                        <div class="features">
-                            <section>
-                                <span class="icon fas fa-book"></span>
-                                <h3>Referências Bibliográficas</h3>
-                                <p>Todos os conteúdos divulgados possuem referências bibliográficas e credibilidade</p>
-                            </section>
-                            <section>
-                                <span class="icon fas fa-calculator"></span>
-                                <h3>Calculadora experimental</h3>
-                                <p>A calculadora é uma ferramenta capaz de permitir a analise entre os valores experimentais e teóricos, ferramenta primordial para compreensão dos estudos da Física</p>
-                            </section>
-                            <section>
-                                <span class="icon fas fa-cog"></span>
-                                <h3>Relatório de dados</h3>
-                                <p>A seção de relatórios será capaz de gerar relátorios de diversas informações a partir da alimentação de dados do próprio site </p>
-                            </section>
-                            <section>
-                                <span class="icon fas fa-desktop"></span>
-                                <h3>Videos explicativos</h3>
-                                <p>Além das demais ferramentas, o site também oferece diversos videos educacionais</p>
-                            </section>
-                            <section>
-                                <span class="icon fas fa-link"></span>
-                                <h3>Materiais para baixar</h3>
-                                <p>Para melhor compreensão e acompanhamento dos materiais estudados também será oferecido o download de materiais em PDF</p>
-                            </section>
-                            <section>
-                                <span class="icon fas fa-gem"></span>
-                                <h3>Dashboards</h3>
-                                <p>Para melhor vizualização dos resultados e demonstração dos dados</p>
-                            </section>
-                            
-                        </div>
-                        <ul class="actions">
-                            <li><a href="#" class="button">Learn more</a></li>
-                        </ul>
-                    </div>
-                </section>
+
+
+        
+
+
 
             
-            <!--three comece já-->
-            <section id="three" class="main special">
-                <article class="major">
-                    <h2>Comece a usar o DatiFísica hoje mesmo</h2>
-                    <p>Crie uma conta gratuita para que você possa salvar seu progresso a qualquer momento e ter acesso aos recursos que o DatiFísica oferece.</p>
-                </article>
-                <footer class="major">
-                    <ul class="actions special">
-                        <li><a href="#" class="button primary">comece agora</a></li>
-                        <li><a href="#" class="button">Saiba mais</a></li>
-                    </ul>
-                </footer>
-            </section>
+        
+               <article>
+
+                <div>
+                    <iframe src="https://colab.research.google.com/drive/1ys_sOPhGYRjfwvNKTjh3zrgxzmob50-Z" frameborder="0"></iframe>
+                    <p>Seu navegador não é compatível com isso </p>
+
+                </div>
+
+
+                   <div><a href="assets/relatorio_de_dados.pdf" download="relatorio_de_dados" target="_blank">arquivo relatorio de dados</a></div>
+               </article>
+
+          
+                  
+
+           
+            
+
+
+
+
+
+            
             <!--Four-->
 
 <section id="four" class="wrapper style1 fade-up">
@@ -201,7 +165,76 @@
         </main>
 
          <!--link externo js-->
-    <script src="js/home.js"></script>
+         <!--script da calculadora-->
+         <!-- Script para manipular o formulário -->
+         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Constantes do sistema físico
+                const GRAVIDADE = 9.8; // Aceleração da gravidade em m/s²
+                const LARGURA_DO_CANO = 0.06; // Comprimento do cano em metros (6 cm)
+                const CONSTANTE_ELASTICA = 10; // Constante elástica da mola em N/m
+    
+                function grausParaRadianos(graus) {
+                    return graus * (Math.PI / 180);
+                }
+    
+                function calcularForcaElastica(deformacao) {
+                    return CONSTANTE_ELASTICA * deformacao;
+                }
+    
+                function calcularVelocidadeInicial(forcaElastica, massa) {
+                    return Math.sqrt((2 * forcaElastica * LARGURA_DO_CANO) / massa);
+                }
+    
+                function calcularAlcanceHorizontal(velocidadeInicial, angulo) {
+                    const anguloRad = grausParaRadianos(angulo);
+                    return (Math.pow(velocidadeInicial, 2) * Math.sin(2 * anguloRad)) / GRAVIDADE;
+                }
+    
+                function calcular(event) {
+                    // Impede o comportamento padrão do formulário (recarregar a página)
+                    event.preventDefault();
+    
+                    // Obtém valores de entrada
+                    const angulo = parseFloat(document.getElementById('angulo').value);
+                    const deformacao = parseFloat(document.getElementById('deformacao').value);
+                    const massa = parseFloat(document.getElementById('massa').value);
+    
+                    // Validação dos valores
+                    if (isNaN(angulo) || isNaN(deformacao) || isNaN(massa) || angulo <= 0 || deformacao <= 0 || massa <= 0) {
+                        document.getElementById('resultado').innerHTML = 
+                            "Por favor, preencha todos os campos com valores válidos e maiores que zero.";
+                        return;
+                    }
+    
+                    // Realiza os cálculos
+                    const forcaElastica = calcularForcaElastica(deformacao);
+                    const velocidadeInicial = calcularVelocidadeInicial(forcaElastica, massa);
+                    const alcanceHorizontal = calcularAlcanceHorizontal(velocidadeInicial, angulo);
+    
+                    // Exibe o resultado
+                    document.getElementById('resultado').innerHTML = 
+                        `O alcance horizontal do projétil é: <strong>${alcanceHorizontal.toFixed(2)}</strong> metros.`;
+                }
+    
+                // Adiciona o evento de submissão ao formulário
+                document.getElementById('formulario').addEventListener("submit", calcular);
+            });
+        </script>
+    </section>
+    
+
+
+   
+
+
+
+
+
+
+
+
+         <!--script do iframe da página-->
     <script>
         const iframe = document.getElementById('iframe');
         iframe.onload = function () {
