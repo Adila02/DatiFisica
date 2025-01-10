@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style1.css">
+
+    <!-- CDN do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <main>
+
+        <section id="img_equipe">
+
+            <div><img src="images/imagesNossa EQUIPE.png"><br>
+                <!--width="640" height="200"-->
+            </div>
+
+        </section>
+
+
+        <article id="equipe">
+            <section>
+                <div class="Aia">
+                    <h2>
+                        Ádila Mota
+                    </h2>
+            
+                    <img src="images/A_250x290.png" alt="foto_Aia">
+            
+                        <ul>
+                            <li>Desenvolvimento web</li>
+                            <li>Desenvolvimento relatório de dados</li>
+                            <li>Desenvolvimento do artigo</li>
+                        </ul>
+                </div>
+            </section>
+            <section>
+                <div class="Leonardo">
+                    <h2>
+                        Leonardo Marcandalli
+                    </h2>
+                    <img src="images/pic01test.png" alt="foto_leonardo">
+            
+            
+                        <ul>
+                            <li>Desenvolvimento 3D</li>
+                            <li>Desenvolvimento Protótipo</li>
+                            <li>Auxilio no desenvolvimento do artigo e código</li>
+                        </ul>
+            
+                </div>
+            </section>
+            
+            <section>
+                <div class="Miqueias">
+                    <h2>
+                        Miqueias Chagas
+                    </h2>
+                    <img src="images/pic01test.png" alt="foto_Miqueias">
+            
+            
+                        <ul>
+                            <li>Desenvolvimento do Banner</li>
+                            <li>Desenvolvimento Artigo</li>
+                            <li>Revisão</li>
+                        </ul>
+            
+                </div>
+            </section>
+            <section>
+                <div class="Victor">
+                    <h2>
+                        Victor Atolini
+                    </h2>
+                    <img src="images/pic01test.png" alt="foto_Victor">
+            
+                        <ul>
+                            <li>Formatação</li>
+                            <li>Auxilio Geral</li>
+                            <li>Revisão</li>
+                        </ul>
+                </div>
+            </section>
+        </article>
+
+
+
+
+            <!--Four-->
+
+<section id="four" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Entre em contato conosco</h2>
+        <p>Entre em contato conosco para saber mais sobre o projeto, colaborações, sugestões ou apenas para mandar um "Oi"!</p>
+        <div class="split style1">
+            <section>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Mensagem</label>
+                            <textarea name="message" id="message" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><a href="#" class="button submit">Send Message</a></li>
+                    </ul>
+                </form>
+            </section>
+            <section>
+                <ul class="contact">
+                    <li>
+                        <h3>Endereço</h3>
+                        <span>12345 Somewhere Road #654<br />
+                        São Paulo, SP 00000-0000<br />
+                        BR</span>
+                    </li>
+                    <li>
+                        <h3>Email</h3>
+                        <a href="mailto:user@untitled.tld">user@untitled.tld</a>
+                    </li>
+                    <li>
+                        <h3>Telefone</h3>
+                        <span>(00) 0000-0000</span>
+                    </li>
+                    <li>
+                        <h3>Social</h3>
+                        <ul class="icons">
+                            <a href="#" class="icon fab fa-twitter"><span></span></a>
+                            <a href="#" class="icon fab fa-facebook-f"><span></span></a>
+                            <a href="#" class="icon fab fa-github"><span></span></a>
+                            <a href="#" class="icon fab fa-instagram"><span></span></a>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+        </main>
+
+         <!--link externo js-->
+    <script>
+        const iframe = document.getElementById('iframe');
+        iframe.onload = function () {
+            try {
+                // Acessa o documento interno do iframe
+                const iframeContent = iframe.contentWindow.document.documentElement;
+                // Ajusta a altura do iframe com base no conteúdo
+                iframe.style.height = iframeContent.scrollHeight + 'px';
+            } catch (error) {
+                console.error('Erro ao ajustar a altura do iframe:', error);
+            }
+        };
+    </script>
+    <script>
+        function notifyParentIframeHeight() {
+            try {
+                // Calcula a altura do conteúdo principal
+                const mainContent = document.querySelector('main');
+                const contentHeight = mainContent.scrollHeight;
+
+                // Envia a altura para o iframe pai
+                if (window.parent) {
+                    window.parent.postMessage({ iframeHeight: contentHeight }, '*');
+                }
+            } catch (error) {
+                console.error('Erro ao calcular a altura do conteúdo:', error);
+            }
+        }
+
+        // Chama a função ao carregar a página
+        window.addEventListener('load', notifyParentIframeHeight);
+
+        // Chama novamente caso o layout mude (opcional)
+        window.addEventListener('resize', notifyParentIframeHeight);
+    </script>
+    
+</body>
+</html>
