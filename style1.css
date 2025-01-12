@@ -1006,3 +1006,82 @@ footer .menu a:hover {
         align-items: center; /* Centraliza o conteúdo à direita da imagem */
     }
 }
+
+
+/*Seção principais ferramentas*/
+
+/*seção iframe */
+
+/* Estiliza o contêiner principal */
+#prot {
+    display: flex; /* Define um layout flex */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    padding: 5px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo do contêiner */
+    border: 1px solid #ddd; /* Borda ao redor do contêiner */
+    border-radius: 8px; /* Arredonda os cantos */
+    max-width: 1200px; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+/* Estiliza o título dentro do contêiner */
+#prot h1 {
+    text-align: center; /* Centraliza o texto */
+    font-size: 27px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do texto */
+}
+
+/* Estiliza a seção do protótipo */
+.prototipo {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    display: flex; /* Define um layout flex */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 5px; /* Espaçamento entre os elementos internos */
+}
+
+/* Estiliza o iframe dentro do protótipo */
+.prototipo iframe {
+    width: 700px; /* O iframe ocupa 95% da largura do contêiner */
+    height: 400px; /* Altura maior para destacar o aspecto paisagem */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Arredonda os cantos do iframe */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destaque */
+}
+
+/* Remove a estilização padrão da lista */
+.prototipo ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove as margens padrão */
+}
+
+/* Estiliza o item da lista */
+.prototipo ul li {
+    margin: 0; /* Remove margens extras */
+    text-align: center; /* Centraliza o botão */
+}
+
+/* Remove a estilização padrão dos links */
+.prototipo ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Estiliza o botão de download */
+.prototipo ul li a button {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 4px; /* Arredonda os cantos do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+/* Muda a cor de fundo do botão ao passar o mouse */
+.prototipo ul li a button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
