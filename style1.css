@@ -766,9 +766,9 @@ footer .menu a:hover {
 
 #img_equipe {
     display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: left;
+    max-width: 1920px; /*1200px*/
+    margin: auto;
     padding: 0; /* Remove completamente o espaçamento interno */
     background-color: var(--cor0); /* Fundo claro do container */
     border-radius: 8px 8px 0px 0px; /* Remove arredondamento se quiser que a imagem ocupe toda a área */
@@ -776,11 +776,12 @@ footer .menu a:hover {
 }
 
 #img_equipe img {
-    width: calc(100% + 40px); /* Faz a imagem ocupar mais que 100% do container para cobrir possíveis margens */
+    width: calc(100% + 400px); /* Faz a imagem ocupar mais que 100% do container para cobrir possíveis margens */
     height: auto;
     object-fit: cover; /* Faz a imagem preencher todo o espaço do container */
-    margin: -20px; /* Move a imagem para fora para remover qualquer borda ou espaço indesejado */
+    margin: auto; /* Move a imagem para fora para remover qualquer borda ou espaço indesejado */ /*-20px*/
     border-radius: 0; /* Remove borda arredondada da imagem */
+    justify-content: center;
 }
 
 
@@ -1085,3 +1086,6 @@ footer .menu a:hover {
 .prototipo ul li a button:hover {
     background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
+
+
+/* Seção da calculadora */

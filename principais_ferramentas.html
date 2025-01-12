@@ -57,8 +57,8 @@
                     </div>
                     <div>
                         <!-- Campo para a deformação -->
-                        <label for="deformacao">Deformação da mola (em metros):</label>
-                        <input type="number" id="deformacao" name="deformacao" step="0.01" required>
+                        <label for="deformacao">Deslocamento longitudinal do elastico (em metros):</label>
+                        <input type="number" id="deformacao" name="deformacao" step="0.001" required>
                         <br><br>
                     </div>
                     <div>
@@ -206,6 +206,7 @@
                     const anguloRad = grausParaRadianos(angulo);
                     return (Math.pow(velocidadeInicial, 2) * Math.sin(2 * anguloRad)) / GRAVIDADE;
                 }
+                
     
                 function calcular(event) {
                     // Impede o comportamento padrão do formulário (recarregar a página)
