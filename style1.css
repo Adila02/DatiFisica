@@ -1011,7 +1011,7 @@ footer .menu a:hover {
 
 /*Seção principais ferramentas*/
 
-/*seção iframe */
+/*seção iframe do google doc */
 
 /* Estiliza o contêiner principal */
 #prot {
@@ -1072,7 +1072,7 @@ footer .menu a:hover {
 
 /* Estiliza o botão de download */
 .prototipo ul li a button {
-    background-color: #007BFF; /* Cor de fundo do botão */
+    background-color: var(--cor5); /* Cor de fundo do botão */
     color: white; /* Cor do texto */
     border: none; /* Remove a borda padrão */
     padding: 10px 20px; /* Espaçamento interno do botão */
@@ -1084,8 +1084,84 @@ footer .menu a:hover {
 
 /* Muda a cor de fundo do botão ao passar o mouse */
 .prototipo ul li a button:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    background-color: var(--cor1); /* Cor de fundo ao passar o mouse */
 }
 
 
 /* Seção da calculadora */
+
+#cal {
+    background-color: white;
+    border-radius: 15px; /* Aumentei o arredondamento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra um pouco maior */
+    width: 700px; /* Aumentei a largura */
+    max-width: 95%;
+    padding: 40px; /* Mais espaço interno */
+    margin: 40px auto; /* Centralizado com mais margem */
+    text-align: center;
+}
+
+#cal h1 {
+    font-size: 2.5rem; /* Aumentei o tamanho da fonte */
+    color: #343a40;
+    margin-bottom: 35px; /* Mais espaçamento inferior */
+}
+
+#cal img {
+    border-radius: 10px; /* Aumentei o arredondamento */
+    margin-bottom: 30px; /* Mais espaço abaixo da imagem */
+    max-width: 100%;
+    height: auto;
+}
+
+#cal .cal_form h2 {
+    background-color: var(--cor5);
+    color: white;
+    padding: 20px; /* Mais espaçamento interno */
+    border-radius: 10px; /* Aumentei o arredondamento */
+    font-size: 1.8rem; /* Aumentei a fonte */
+    margin-bottom: 35px; /* Mais espaço abaixo */
+}
+
+#cal form div {
+    margin-bottom: 25px; /* Maior espaço entre campos */
+    text-align: left;
+}
+
+#cal label {
+    font-size: 1.2rem; /* Maior tamanho de texto */
+    color: #495057;
+    display: block;
+    margin-bottom: 10px; /* Um pouco mais de espaçamento */
+}
+
+#cal input[type="number"] {
+    width: 100%;
+    padding: 15px; /* Mais espaço interno */
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Aumentei o arredondamento */
+    font-size: 1.2rem; /* Aumentei o tamanho da fonte */
+}
+
+#cal button {
+    background-color: var(--cor5);
+    color: white;
+    padding: 15px 30px; /* Maior botão */
+    border: none;
+    border-radius: 8px; /* Aumentei o arredondamento */
+    font-size: 1.4rem; /* Aumentei o tamanho da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cal button:hover {
+    background-color: var(--cor1);
+}
+
+#cal #resultado {
+    color: #495057;
+    font-size: 1.4rem; /* Aumentei o tamanho da fonte */
+    margin-top: 30px; /* Mais espaçamento superior */
+    font-weight: bold;
+}
+
