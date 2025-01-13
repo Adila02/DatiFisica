@@ -45,37 +45,28 @@
             </div>
         
             <div>
-                <!-- Subtítulo para a seção de cálculo -->
                 <h2>Cálculo do Alcance Horizontal</h2>
-                <!-- Formulário para entrada de dados -->
                 <form id="formulario">
                     <div>
-                        <!-- Campo para o ângulo -->
                         <label for="angulo">Ângulo de lançamento (em graus):</label>
                         <input type="number" id="angulo" name="angulo" step="0.01" required>
                         <br><br>
                     </div>
                     <div>
-                        <!-- Campo para a deformação -->
-                        <label for="deformacao">Deslocamento longitudinal do elastico (em metros):</label>
+                        <label for="deformacao">Deslocamento longitudinal do elástico (em metros):</label>
                         <input type="number" id="deformacao" name="deformacao" step="0.001" required>
                         <br><br>
                     </div>
                     <div>
-                        <!-- Campo para a massa -->
                         <label for="massa">Massa do projétil (em kg):</label>
                         <input type="number" id="massa" name="massa" step="0.001" required>
                         <br><br>
                     </div>
-                    <!-- Botão de cálculo -->
-                    <ul>
-                        <li><a href=""><button type="submit">Calcular</button></a></li>
-                    </ul>
+                    <button type="submit">Calcular</button>
                 </form>
-                <!-- Área para exibir o resultado -->
                 <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
             </div>
-
+            
 
 
         
@@ -118,135 +109,73 @@
 
 
             
-            <!--Four-->
-
-<section id="four" class="wrapper style1 fade-up">
-    <div class="inner">
-        <h2>Entre em contato conosco</h2>
-        <p>Entre em contato conosco para saber mais sobre o projeto, colaborações, sugestões ou apenas para mandar um "Oi"!</p>
-        <div class="split style1">
-            <section>
-                <form method="post" action="#">
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="name">Nome</label>
-                            <input type="text" name="name" id="name" />
-                        </div>
-                        <div class="field half">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" />
-                        </div>
-                        <div class="field">
-                            <label for="message">Mensagem</label>
-                            <textarea name="message" id="message" rows="5"></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><a href="#" class="button submit">Send Message</a></li>
-                    </ul>
-                </form>
-            </section>
-            <section>
-                <ul class="contact">
-                    <li>
-                        <h3>Endereço</h3>
-                        <span>12345 Somewhere Road #654<br />
-                        São Paulo, SP 00000-0000<br />
-                        BR</span>
-                    </li>
-                    <li>
-                        <h3>Email</h3>
-                        <a href="mailto:user@untitled.tld">user@untitled.tld</a>
-                    </li>
-                    <li>
-                        <h3>Telefone</h3>
-                        <span>(00) 0000-0000</span>
-                    </li>
-                    <li>
-                        <h3>Social</h3>
-                        <ul class="icons">
-                            <a href="#" class="icon fab fa-twitter"><span></span></a>
-                            <a href="#" class="icon fab fa-facebook-f"><span></span></a>
-                            <a href="#" class="icon fab fa-github"><span></span></a>
-                            <a href="#" class="icon fab fa-instagram"><span></span></a>
-                            
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </div>
-</section>
+           
 
         </main>
 
-         <!--link externo js-->
+         
          <!--script da calculadora-->
          <!-- Script para manipular o formulário -->
          <script>
             document.addEventListener("DOMContentLoaded", () => {
-                // Constantes do sistema físico
-                const GRAVIDADE = 9.8; // Aceleração da gravidade em m/s²
-                const LARGURA_DO_CANO = 0.06; // Comprimento do cano em metros (6 cm)
-                const CONSTANTE_ELASTICA = 57; // Constante elástica da mola em N/m
-    
-                function grausParaRadianos(graus) {
-                    return graus * (Math.PI / 180);
-                }
-    
-                function calcularForcaElastica(deformacao) {
-                    return CONSTANTE_ELASTICA * deformacao;
-                }
-    
-                function calcularVelocidadeInicial(forcaElastica, massa) {
-                    return Math.sqrt((2 * forcaElastica * LARGURA_DO_CANO) / massa);
-                }
-    
-                function calcularAlcanceHorizontal(velocidadeInicial, angulo) {
-                    const anguloRad = grausParaRadianos(angulo);
-                    return (Math.pow(velocidadeInicial, 2) * Math.sin(2 * anguloRad)) / GRAVIDADE;
-                }
-                
-    
-                function calcular(event) {
-                    // Impede o comportamento padrão do formulário (recarregar a página)
-                    event.preventDefault();
-    
-                    // Obtém valores de entrada
-                    const angulo = parseFloat(document.getElementById('angulo').value);
-                    const deformacao = parseFloat(document.getElementById('deformacao').value);
-                    const massa = parseFloat(document.getElementById('massa').value);
-    
-                    // Validação dos valores
-                    if (isNaN(angulo) || isNaN(deformacao) || isNaN(massa) || angulo <= 0 || deformacao <= 0 || massa <= 0) {
-                        document.getElementById('resultado').innerHTML = 
-                            "Por favor, preencha todos os campos com valores válidos e maiores que zero.";
-                        return;
-                    }
-    
-                    // Realiza os cálculos
-                    const forcaElastica = calcularForcaElastica(deformacao);
-                    const velocidadeInicial = calcularVelocidadeInicial(forcaElastica, massa);
-                    const alcanceHorizontal = calcularAlcanceHorizontal(velocidadeInicial, angulo);
-    
-                    // Exibe o resultado
-                    document.getElementById('resultado').innerHTML = 
-                        `O alcance horizontal do projétil é: <strong>${alcanceHorizontal.toFixed(2)}</strong> metros.`;
-                }
-    
-                // Adiciona o evento de submissão ao formulário
-                document.getElementById('formulario').addEventListener("submit", calcular);
-            });
-        </script>
-    </section>
+    // Constantes do sistema físico
+    const GRAVIDADE = 9.8; // Aceleração da gravidade em m/s²
+    const LARGURA_DO_CANO = 0.06; // Comprimento do cano em metros (6 cm)
+    const CONSTANTE_ELASTICA = 57; // Constante elástica da mola em N/m
+
+    function grausParaRadianos(graus) {
+        return graus * (Math.PI / 180);
+    }
+
+    function calcularForcaElastica(deformacao) {
+        return CONSTANTE_ELASTICA * deformacao;
+    }
+
+    function calcularVelocidadeInicial(forcaElastica, massa) {
+        return Math.sqrt((2 * forcaElastica * LARGURA_DO_CANO) / massa);
+    }
+
+    function calcularAlcanceHorizontal(velocidadeInicial, angulo) {
+        const anguloRad = grausParaRadianos(angulo);
+        return (Math.pow(velocidadeInicial, 2) * Math.sin(2 * anguloRad)) / GRAVIDADE;
+    }
+
+    function calcular(event) {
+        // Impede o comportamento padrão do formulário (recarregar a página)
+        event.preventDefault();
+
+        // Obtém valores de entrada
+        const angulo = parseFloat(document.getElementById('angulo').value);
+        const deformacao = parseFloat(document.getElementById('deformacao').value);
+        const massa = parseFloat(document.getElementById('massa').value);
+
+        // Validação dos valores
+        if (isNaN(angulo) || isNaN(deformacao) || isNaN(massa) || angulo <= 0 || deformacao <= 0 || massa <= 0) {
+            document.getElementById('resultado').innerHTML =
+                "Por favor, preencha todos os campos com valores válidos e maiores que zero.";
+            return;
+        }
+
+        // Realiza os cálculos
+        const forcaElastica = calcularForcaElastica(deformacao);
+        const velocidadeInicial = calcularVelocidadeInicial(forcaElastica, massa);
+        const alcanceHorizontal = calcularAlcanceHorizontal(velocidadeInicial, angulo);
+
+        // Exibe o resultado
+        document.getElementById('resultado').innerHTML =
+            `O alcance horizontal do projétil é: <strong>${alcanceHorizontal.toFixed(2)}</strong> metros.`;
+    }
+
+    // Adiciona o evento de submissão ao formulário
+    const formulario = document.getElementById('formulario');
+    formulario.addEventListener("submit", calcular);
+});
+
+         </script>
     
 
 
    
-
-
-
-
 
 
 
@@ -266,7 +195,7 @@
         };
     </script>
     <script>
-        function notifyParentIframeHeight() {
+       function notifyParentIframeHeight() {
             try {
                 // Calcula a altura do conteúdo principal
                 const mainContent = document.querySelector('main');
