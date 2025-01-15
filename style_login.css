@@ -25,7 +25,7 @@ grandes telas: acima de 1200px
 */
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -63,7 +63,7 @@ section#login{
 
 section#login > div#img_login {
     display: block;
-    background-color: #6241D9 url(images/img_login.jpg);
+    background: url('images/img_login.jpg') no-repeat center center;
     background-size: cover;
     height: 200px;
 }
@@ -132,6 +132,39 @@ form > a.botao:hover{
 form > a.botao > i{
     font-size: 0.8em;
 
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 992){
+    section#login{
+        width:950px;
+    }
+
+    section#login > div#img_login{
+        float:left;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#formulario{
+        float: right;
+        width: 50%;
+        
+    }
+
+    div#formulario > h1{
+        font-size: 2em;
+
+    }
+
+    div#formulario > p{
+        font-size: 1.2em;
+    }
+
+
+    
 }
 
 
