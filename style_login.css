@@ -63,7 +63,7 @@ section#login{
 
 section#login > div#img_login {
     display: block;
-    background-color: #6241D9 url(../DatiFisica/images/base_250x290.jpeg);
+    background-color: #6241D9 url(images/img_login.jpg);
     background-size: cover;
     height: 200px;
 }

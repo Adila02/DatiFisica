@@ -766,52 +766,33 @@ footer .menu a:hover {
 
 #img_equipe {
     display: flex;
-    justify-content: left;
-    max-width: 1920px; /*1200px*/
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    max-width: 1200px; /* Mantém o limite máximo da largura do container */
+    width: 100%; /* O container ocupa toda a largura disponível */
     margin: auto;
-    padding: 0; /* Remove completamente o espaçamento interno */
-    background-color: var(--cor0); /* Fundo claro do container */
-    border-radius: 8px 8px 0px 0px; /* Remove arredondamento se quiser que a imagem ocupe toda a área */
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
-    background-size: cover;
-   
-
+    padding: 0;
+    background-color: var(--cor0);
+    border-radius: 8px; /* Mantém o arredondamento leve */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
 }
 
 #img_equipe img {
-    width: calc(100% + 400px); /* Faz a imagem ocupar mais que 100% do container para cobrir possíveis margens */
-    height: auto;
-    object-fit: cover; /* Faz a imagem preencher todo o espaço do container */
-    margin: auto; /* Move a imagem para fora para remover qualquer borda ou espaço indesejado */ /*-20px*/
-    border-radius: 0; /* Remove borda arredondada da imagem */
-    justify-content: center;
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    height: 100%; /* Faz a imagem ocupar toda a altura do container */
+    object-fit: cover; /* Preenche o container sem distorcer a imagem */
+    border-radius: 0;
+    display: block;
 }
 
 /* Media Query para telas menores que 768px (geralmente celulares) */
 @media (max-width: 768px) {
-    #img_equipe {
-        justify-content: center; /* Centraliza o conteúdo em telas menores */
-    }
-
     #img_equipe img {
-        width: 100%; /* Faz a imagem ocupar 100% da largura do container */
-        margin: 0; /* Remove margens extras */
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Garante que a imagem caiba dentro do container sem cortes */
     }
 }
-
-/* Media Query para telas de tablet (entre 768px e 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-    #img_equipe {
-        justify-content: center; /* Centraliza em telas médias */
-    }
-
-    #img_equipe img {
-        width: 100%; /* Garante que a imagem ocupe 100% do container em tablets */
-        margin: 0;
-    }
-}
-
-
 
 
 /*Article equipe*/
