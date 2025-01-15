@@ -787,6 +787,30 @@ footer .menu a:hover {
     justify-content: center;
 }
 
+/* Media Query para telas menores que 768px (geralmente celulares) */
+@media (max-width: 768px) {
+    #img_equipe {
+        justify-content: center; /* Centraliza o conteúdo em telas menores */
+    }
+
+    #img_equipe img {
+        width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+        margin: 0; /* Remove margens extras */
+    }
+}
+
+/* Media Query para telas de tablet (entre 768px e 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #img_equipe {
+        justify-content: center; /* Centraliza em telas médias */
+    }
+
+    #img_equipe img {
+        width: 100%; /* Garante que a imagem ocupe 100% do container em tablets */
+        margin: 0;
+    }
+}
+
 
 
 
@@ -1008,6 +1032,12 @@ footer .menu a:hover {
 
     #assunto .featr .content {
         align-items: center; /* Centraliza o conteúdo à direita da imagem */
+        text-align: center; /* Centraliza o texto */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    #assunto .featr h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título em dispositivos menores */
     }
 }
 
@@ -1169,5 +1199,5 @@ footer .menu a:hover {
 }
 
 
-/* estilo do icone de login no menu */
+
 
