@@ -773,6 +773,9 @@ footer .menu a:hover {
     background-color: var(--cor0); /* Fundo claro do container */
     border-radius: 8px 8px 0px 0px; /* Remove arredondamento se quiser que a imagem ocupe toda a área */
     overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+    background-size: cover;
+   
+
 }
 
 #img_equipe img {
@@ -1164,4 +1167,7 @@ footer .menu a:hover {
     margin-top: 30px; /* Mais espaçamento superior */
     font-weight: bold;
 }
+
+
+/* estilo do icone de login no menu */
 
