@@ -955,7 +955,7 @@ footer .menu a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve ao redor do item */
     justify-content: flex-start; /* Organiza o conteúdo com espaçamento entre os elementos */
     width: 100%; /* Largura total dos itens */
-    flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha */
+    
 }
 
 /* Estilos para a imagem dentro de cada item */
@@ -1039,6 +1039,7 @@ footer .menu a:hover {
 
     #assunto .featr h2 {
         font-size: 1.5em; /* Reduz o tamanho do título em dispositivos menores */
+        flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha */
     }
 }
 
@@ -1197,6 +1198,105 @@ footer .menu a:hover {
     font-size: 1.4rem; /* Aumentei o tamanho da fonte */
     margin-top: 30px; /* Mais espaçamento superior */
     font-weight: bold;
+}
+
+
+/*Seção do relatório de dados*/
+
+#dados {
+    background-color: white;
+    border-radius: 15px; /* Arredondamento suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para destacar o container */
+    width: 700px; /* Largura consistente */
+    max-width: 95%;
+    padding: 20px; /* Espaço interno */
+    margin: 20px auto; /* Centralizado com margem */
+    text-align: center; /* Centralizar textos e conteúdos */
+}
+
+#dados h1 {
+    font-size: 2.5rem; /* Tamanho do título */
+    color: #343a40;
+    margin-bottom: 35px; /* Espaçamento inferior */
+}
+
+#dados a {
+    font-size: 1.2rem; /* Tamanho do texto do link */
+    color: var(--cor5); /* Cor definida pela variável */
+    text-decoration: none; /* Remover sublinhado */
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+#dados a:hover {
+    color: var(--cor1); /* Alterar cor ao passar o mouse */
+}
+
+#dados .relatorio_dados {
+    margin-bottom: 25px; /* Espaçamento entre os itens */
+    text-align: center;
+}
+
+#dados .relatorio_dados ul {
+    list-style: none; /* Remover marcadores */
+    padding: 0; /* Remover preenchimento */
+}
+
+#dados .relatorio_dados ul li {
+    margin-bottom: 15px; /* Espaçamento entre itens */
+}
+
+#dados button {
+    background-color: var(--cor5); /* Cor principal */
+    color: white;
+    padding: 15px 30px; /* Botão maior */
+    border: none;
+    border-radius: 8px; /* Arredondamento */
+    font-size: 1.4rem; /* Tamanho da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#dados button:hover {
+    background-color: var(--cor1); /* Alterar cor ao passar o mouse */
+}
+
+
+#img_equipe {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
+    align-items: center; /* Centraliza verticalmente */
+    max-width: 1920px; /* Limite para telas grandes */
+    margin: auto;
+    padding: 0;
+    background-color: var(--cor0); /* Fundo claro do container */
+    border-radius: 8px 8px 0px 0px; /* Arredondamento do topo */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do container */
+    background-size: cover; /* Cobre todo o espaço disponível */
+    height: 400px; /* Altura fixa para o container */
+}
+
+#img_equipe img {
+    width: 100%; /* A imagem ocupa 100% da largura do container */
+    height: 100%; /* A altura da imagem é 100% da altura do container */
+    object-fit: cover; /* A imagem preenche todo o espaço disponível sem distorcer */
+    object-position: center; /* Garante que a imagem fique centralizada */
+    border-radius: 0; /* Remove borda arredondada da imagem */
+}
+
+/* Media Query para telas menores que 768px (geralmente celulares) */
+@media (max-width: 768px) {
+    #img_equipe {
+        height: 300px; /* Ajusta a altura do container para telas menores */
+    }
+}
+
+/* Media Query para telas de tablet (entre 768px e 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #img_equipe {
+        height: 350px; /* Ajusta a altura para telas de tablets */
+    }
 }
 
 
