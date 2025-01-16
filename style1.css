@@ -1103,6 +1103,26 @@ footer .menu a:hover {
     background-color: var(--cor1); /* Cor de fundo ao passar o mouse */
 }
 
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    #prot {
+        padding: 10px; /* Reduz o espaço interno */
+    }
+
+    #prot h1 {
+        font-size: 22px; /* Reduz o tamanho da fonte */
+    }
+
+    .prototipo iframe {
+        width: 100%; /* Ajusta a largura do iframe para ocupar o máximo do contêiner */
+        height: 250px; /* Reduz a altura do iframe */
+    }
+
+    .prototipo ul li a button {
+        padding: 8px 16px; /* Reduz o tamanho do botão */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+}
 
 /* Seção da calculadora */
 
@@ -1179,6 +1199,44 @@ footer .menu a:hover {
     font-size: 1.4rem; /* Aumentei o tamanho da fonte */
     margin-top: 30px; /* Mais espaçamento superior */
     font-weight: bold;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    #cal {
+        padding: 20px; /* Reduz o espaço interno */
+        margin: 20px auto; /* Margem menor */
+    }
+
+    #cal h1 {
+        font-size: 2rem; /* Reduz tamanho da fonte */
+        margin-bottom: 25px;
+    }
+
+    #cal .cal_form h2 {
+        font-size: 1.6rem; /* Fonte menor */
+        padding: 15px; /* Reduz espaço interno */
+        margin-bottom: 25px;
+    }
+
+    #cal label {
+        font-size: 1rem; /* Reduz tamanho do texto */
+    }
+
+    #cal input[type="number"] {
+        padding: 10px; /* Reduz espaço interno */
+        font-size: 1rem;
+    }
+
+    #cal button {
+        padding: 10px 20px; /* Reduz o tamanho do botão */
+        font-size: 1.2rem;
+    }
+
+    #cal #resultado {
+        font-size: 1.2rem; /* Ajusta tamanho da fonte */
+        margin-top: 20px;
+    }
 }
 
 
