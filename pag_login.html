@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pagina de login</title>
     <link rel="stylesheet" href="style_login.css">
+     <!-- CDN do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <main>
@@ -19,15 +21,21 @@
                 </p>
                 <form action="login.js" method="post" autocomplete="on">
                     <div class="campo">
-                        <label for="ilogin">Login</label>
+                        <i class="fas fa-user"></i>
+                        
                         <input type="email" name="login" id="ilogin" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="ilogin">Login</label>
                     </div>
                     <div class="campo">
-                        <label for="isenha">Senha</label>
+                        <i class="fas fa-key"></i>
+                        
                         <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="isenha">Senha</label>
                     </div>
                     <input type="submit" value="entrar">
-                    <a href="esqueci.html" class="botao">Esqueci a senha </a>
+                    <a href="esqueci.html" class="botao">
+                        Esqueci a senha <i class="fas fa-envelope"></i>
+                    </a>
 
                 </form>
 
